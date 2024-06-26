@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Replay Mod</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <div class="overlay">
+        <div class="border-1"></div>
+        <div class="border-1 border-2"></div>
+        <div class="container">
+            <!-- projects will be added here -->
+        </div>
+        <div class="post-details" style="color: white;">
+            <div class="format-page">
+                <p>This add-on allows you to record in-game actions and replay it later.</p>
+<h2>Trailer: 🎥</h2>
+<p>[media=https://www.youtube.com/watch?v=hVQzAFVFIAA]</p>
+<h2>Features: ✨</h2>
+<ul>
+	<li>Records player position.</li>
+	<li>Records player actions: crawling &ndash; swimming &ndash; flying &ndash; sneaking.</li>
+	<li>Records blocks placing and breaking and some block interaction (like opening a door or trapdoor).</li>
+	<li>Smooth camera path and camera options.</li>
+	<li>The ability to add your own skin (you can add more than one. The skin appears depending on the name).</li>
+	<li>The ability to speed up the replay (not recommended, I can&rsquo;t change the speed of some stuff, like pistons and sounds).</li>
+</ul>
+<h2>Known Bugs: ⚠</h2>
+<ul>
+	<li><span style="background-color: rgb(251,238,184); color: rgb(224,62,45);">Sleeping is not supported, and the player appears floating above the bed.</span></li>
+	<li><span style="background-color: rgb(251,238,184); color: rgb(224,62,45);">Choppy player movement in the second replay. (re-loading the world after each replay is recommended)</span></li>
+</ul>
+<h2>Things that you should know: ❕</h2>
+<ul>
+	<li><span style="color: rgb(230,126,35); background-color: rgb(251,238,184);">To prevent item/block duplication, any items dropped around the replay entity will get removed.</span></li>
+	<li><span style="color: rgb(230,126,35); background-color: rgb(251,238,184);">Explosions are not supported yet and any explosion in the replay area will get removed.</span></li>
+	<li><span style="color: rgb(230,126,35); background-color: rgb(251,238,184);">Only one player can use the replay at a time. (Too much data).</span></li>
+	<li><span style="color: rgb(230,126,35); background-color: rgb(251,238,184);">Other players can&rsquo;t place/break blocks in the replay area.</span></li>
+	<li><span style="color: rgb(224,62,45); background-color: rgb(251,238,184);"><b>While the add-on on BETA it will only support the official release.</b></span></li>
+</ul>
+<h2>How to add your skin to the mod: 👕</h2>
+<p><span style="color: rgb(224,62,45);"><b>Watch this video if this is too complicated for you:</b></span></p>
+<p>[media=https://www.youtube.com/watch?v=bIoDCJZU1AU]</p>
+<p>(👇 click to open link)</p>
+<p><b><a href="https://www.youtube.com/watch?v=H0z2qfyIAR4" target="_blank" rel="noopener">Indonesian Video</a> by <a href="https://www.youtube.com/@NajibMc" target="_blank" rel="noopener">NAJIB EUY</a></b></p>
+<h3>Let&rsquo;s add your skin first:</h3>
+<ul>
+	<li>Unzip the add-on.</li>
+	<li>Copy your skin to <span style="color: rgb(53,152,219);"><b>&ldquo;Replay Mod RPtexturesentity&rdquo;</b></span> folder path.</li>
+	<li>Make sure your skin name is without any spaces like all the skins in that folder.</li>
+</ul>
+<h3>Now let&rsquo;s edit the entity.json:</h3>
+<ul>
+	<li>Open <span style="color: rgb(53,152,219);"><b>&ldquo;Replay Mod RPentitysteve.entity.json&rdquo;</b></span> with any code editor.</li>
+	<li>Part of the code look like:</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://modbay.org/uploads/posts/2024-03/replay-mod-editing-entity-json-step-1.png" alt="Editing entity.json: Step 1" width="531" height="171"></p>
+<ul>
+	<li>Add another line, same as the others and add a comma &ldquo;,&rdquo; in the line before the last line:</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://modbay.org/uploads/posts/2024-03/replay-mod-editing-entity-json-step-2.png" alt="Editing entity.json: Step 2" width="532" height="187"></p>
+<h3>Now let&rsquo;s edit the entity render controller:</h3>
+<ul>
+	<li>Open <span style="color: rgb(53,152,219);"><b>&ldquo;Replay Mod RPrender_controllersskin.json&rdquo;</b></span> with the code editor.</li>
+	<li>Part of the code look like:</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://modbay.org/uploads/posts/2024-03/replay-mod-editing-entity-render-controller-step-1.png" alt="Editing Entity Render Controller: Step 1" width="307" height="166"></p>
+<ul>
+	<li>Add the &ldquo;name1&rdquo; from the previews step to the array: (don&rsquo;t forget the comma: &ldquo;,&rdquo;)</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://modbay.org/uploads/posts/2024-03/replay-mod-editing-entity-render-controller-step-2.png" alt="Editing Entity Render Controller: Step 2" width="307" height="191"></p>
+<ul>
+	<li>Next, let&rsquo;s edit this:</li>
+</ul>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://modbay.org/uploads/posts/2024-03/replay-mod-editing-entity-render-controller-step-3.png" alt="Editing Entity Render Controller: Step 3" width="570" height="126"></p>
+<ul>
+<li>Add <span style="color: rgb(53,152,219);"><b>&ldquo;array.skin[query.is_name_any('Your in game name')*8&rdquo;</b></span> to it. (8 is the number after you + 1)</li>
+</ul>
+<p><a class="highslide" href="https://modbay.org/uploads/posts/2024-03/replay-mod-editing-entity-render-controller-step-4.png"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://modbay.org/uploads/posts/2024-03/medium/replay-mod-editing-entity-render-controller-step-4.png" alt="Editing Entity Render Controller: Step 4" width="710" height="83"></a></p>
+<h2>How to use: ⁉</h2>
+<p>[media=https://www.youtube.com/watch?v=Kr1zNG1V6cA]</p>
+	<p>(👇 click to open links)</p>
+	<p><b><a href="https://www.youtube.com/watch?v=dnz97dcQ7G4" target="_blank" rel="noopener">Portuguese Video</a> by <a href="https://www.youtube.com/@Ponteiiro" target="_blank" rel="noopener">Ponteiiro</a></b></p>
+	<p><b><a href="https://www.youtube.com/watch?v=H0z2qfyIAR4" target="_blank" rel="noopener">Indonesian Video</a> by <a href="https://www.youtube.com/@NajibMc" target="_blank" rel="noopener">NAJIB EUY</a></b></p>
+	<ul>
+		<li>Rename a clock to &ldquo;replay&rdquo;.</li>
+		<li>Using the clock will bring up a menu, click record to start recording a scene.</li>
+		<li>After you are done, use the clock again, this will bring up a menu that you can pause or end a scene from it.</li>
+		<li>If you click pause, you can resume the recording. If you click end, you will get to the camera setup stage. 
+			<br>
+			<ul>
+				<li>Select the first frame 0 and click submit.</li>
+				<li>Position the player and use the clock to submit the camera position and rotation.</li>
+				<li>Repeat those steps from the frames you want.</li>
+				<li>Select the last frame and submit a camera position/rotation to end the camera setup stage.</li>
+			</ul>
+		</li>
+		<li>You can now start the replay scene (use the clock to do so). <span style="color: rgb(224,62,45);"><b>Make sure you are recording.</b></span></li>
+		<li><span style="background-color: rgb(241,196,15); color: rgb(224,62,45);"><b>IN CASE OF ANY BUG, YOU CAN USE ";replay reset" TO RESTORE YOUR BUILD.</b></span></li>
+	</ul>
+	<h2>Requirements: ⚠</h2>
+	<ul>
+		<li>Holiday Creator Features</li>
+		<li>Upcoming Creator Features</li>
+		<li>Beta APIs</li>
+	</ul>
+	<p><a class="highslide" href="https://modbay.org/uploads/posts/2024-03/replay-mod-required-experiments.png"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://modbay.org/uploads/posts/2024-03/medium/replay-mod-required-experiments.png" alt="Required Experiments for Replay Mod" width="490" height="169"></a></p>
+	<h2>Updated on June 13</h2>
+	<ul>
+		<li>1.21 support.</li>
+	</ul>
+	<div class="spoiler" contenteditable="false">
+		<div class="spoiler_head" contenteditable="true">Changelog for April 24 / Old Update</div>
+		<div class="spoiler_body" contenteditable="true">
+			<ul>
+				<li>1.20.80 support.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="spoiler" contenteditable="false">
+		<div class="spoiler_head" contenteditable="true">Changelog for April 13 / Old Update</div>
+		<div class="spoiler_body" contenteditable="true">
+			<ul>
+				<li>Fixed a problem with some devices that made a class from the Script API not exist.</li>
+				<li>Removed type family "player" from the replay player, so the monsters don't follow them.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="spoiler" contenteditable="false">
+		<div class="spoiler_head" contenteditable="true">Changelog for March 20 / Old Update</div>
+		<div class="spoiler_body" contenteditable="true">
+			<ul>
+				<li>Fixed the player spawning in the sky after the replay is done.</li>
+				<li>Added a way to reset your build in case any bugs. (";replay reset" command)</li>
+			</ul>
+		</div>
+	</div>
+	<div class="spoiler" contenteditable="false">
+		<div class="spoiler_head" contenteditable="true">Changelog for March 13 / Old Update</div>
+		<div class="spoiler_body" contenteditable="true">
+			<ul>
+				<li>Fixed some dupe glitches.</li>
+				<li>Removed the invisibility effects.</li>
+				<li>Removed some debugs warning.</li>
+				<li>Now it hides buttons in the replay.</li>
+				<li>Now it removes falling blocks after the replay is done.</li>
+			</ul>
+		</div>
+	</div>
+            </div>
+        </div>
+    </div>
+    <script src="../../format.js"></script>
+</body>
+</html>

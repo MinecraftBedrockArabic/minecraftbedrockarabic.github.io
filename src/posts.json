@@ -1,0 +1,76 @@
+{
+  "mods": [
+    {
+      "title": "Player Heads Add-on",
+      "description": "This add-on allows you to add Player Heads to the game, giving you the ability to customize your game and world.",
+      "link": "https://modbay.org/mods/1976-player-heads-addon.html",
+      "coverImage": "https://modbay.org/uploads/posts/2024-05/player-heads-addon-main-cover.png"
+    },
+    {
+      "title": "Replay Mod [1.21]: BETA",
+      "description": "This add-on allows you to record in-game actions and replay it later.",
+      "link": "https://modbay.org/mods/1652-replay-mod.html",
+      "coverImage": "https://modbay.org/uploads/posts/2024-03/replay-mod-main-cover.png"
+    },
+    {
+      "title": "Arabic Language Fix [1.20 → 1.21]",
+      "description": "This add-on fixes the inverted syntax of the Arabic language within the game. هذا المود (إضافة او ادون) يقوم بإصلاح شكل اللغة العربية المعكوس داخل اللعبة",
+      "link": "https://modbay.org/mods/1253-arabic-language-fix.html",
+      "coverImage": "https://modbay.org/uploads/posts/2023-11/arabic-language-fix-pack-main-cover.jpg"
+    },
+    {
+      "title": "Clickable Signs [1.20.4x | 1.20.6x]",
+      "description": "This addon allows you to make signs clickable. You can also add commands that run when clicking the sign (you can add them only in creative).",
+      "link": "https://modbay.org/mods/1248-clickable-signs.html",
+      "coverImage": "https://modbay.org/uploads/posts/2023-10/clickable-signs-main-cover.png"
+    },
+    {
+      "title": "Banner Markers [1.20.1x | 1.20.7x]",
+      "description": "Did you wish that you can place markers in a map? This add-on adds a parity feature from Minecraft: Java Edition. This feature allows you to put markers in your map using banners.",
+      "link": "https://modbay.org/mods/1165-banner-markers.html",
+      "coverImage": "https://modbay.org/uploads/posts/2023-10/banner-markers-main-cover.png"
+    }
+  ],
+  "others": [
+    {
+      "title": "ModBay Feed Discord App",
+      "description": "This Bot allows you to receive notifications from ModBay when a creator you are subscribed to submits a new mod or a new update. you can also subscribe to comment section of any creator.",
+      "link": "#",
+      "coverImage": "./src/assets/modBay.png"
+    }
+  ],
+  "friends": [
+    {
+      "title": "Mevo",
+      "description": "Minecraft Bedrock Add-on Creator.",
+      "link": "https://modbay.org/user/Mevo/",
+      "coverImage": "./src/assets/me.jpg"
+    },
+    {
+      "title": "MZ3G",
+      "description": "Minecraft Bedrock Add-on Creator.",
+      "link": "https://modbay.org/user/MZ3G/",
+      "coverImage": "./src/assets/mz.jpg"
+    },
+    {
+      "title": "ShadowGem100k",
+      "description": "Minecraft Bedrock Add-on Creator.",
+      "link": "https://modbay.org/user/ShadowGem100k/",
+      "coverImage": "./src/assets/sh.jpg"
+    }
+  ],
+  "social": [
+    {
+      "title": "Discord Server",
+      "description": "This is my official Discord Server. It is open for everyone.",
+      "link": "https://discord.gg/6z8ZPUdVTT",
+      "coverImage": "./src/assets/dis.jpg"
+    },
+    {
+      "title": "github",
+      "description": "My github account. I am new to GitHub but feel free to check out my projects.",
+      "link": "https://github.com/MinecraftBedrockArabic",
+      "coverImage": "./src/assets/git.jpg"
+    }
+  ]
+}
